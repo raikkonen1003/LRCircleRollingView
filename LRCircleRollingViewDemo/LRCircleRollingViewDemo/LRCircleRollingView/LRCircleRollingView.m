@@ -95,14 +95,19 @@
     }
 }
 
+- (NSTimer *)timer {
+    if (!_timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+    return _timer;
+}
 /**
  *  添加定时器
  */
 - (void)addTimer
 {
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-    self.timer = timer;
+    [self timer];
 }
 
 /**
@@ -110,6 +115,9 @@
  */
 - (void)removeTimer
 {
+    if (!_timer) {
+        return;
+    }
     // 停止定时器
     [self.timer invalidate];
     self.timer = nil;

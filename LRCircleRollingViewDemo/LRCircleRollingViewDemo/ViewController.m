@@ -42,6 +42,7 @@
     rollView.frame = CGRectMake(10, 56, 300, 130);
     [self.view addSubview:rollView];
     self.rollView = rollView;
+    
 }
 
 
