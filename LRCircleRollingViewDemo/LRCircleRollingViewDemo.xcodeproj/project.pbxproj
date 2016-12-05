@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC1740511DF538DB008793F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740501DF538DB008793F5 /* main.m */; };
+		FC1740541DF538DB008793F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740531DF538DB008793F5 /* AppDelegate.m */; };
+		FC1740571DF538DB008793F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740561DF538DB008793F5 /* ViewController.m */; };
+		FC17405A1DF538DB008793F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1740581DF538DB008793F5 /* Main.storyboard */; };
+		FC17405C1DF538DB008793F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC17405B1DF538DB008793F5 /* Assets.xcassets */; };
+		FC17405F1DF538DB008793F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC17405D1DF538DB008793F5 /* LaunchScreen.storyboard */; };
+		FC17406A1DF538DB008793F5 /* LRCircleRollingViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740691DF538DB008793F5 /* LRCircleRollingViewDemoTests.m */; };
+		FC1740751DF538DB008793F5 /* LRCircleRollingViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740741DF538DB008793F5 /* LRCircleRollingViewDemoUITests.m */; };
+		FC1740851DF539A7008793F5 /* LRCircleRollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740841DF539A7008793F5 /* LRCircleRollingView.m */; };
+		FC1740891DF53CC2008793F5 /* LRNews.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740881DF53CC2008793F5 /* LRNews.m */; };
+		FC1740A21DF53CD0008793F5 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17408C1DF53CD0008793F5 /* MJArgument.m */; };
+		FC1740A31DF53CD0008793F5 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17408E1DF53CD0008793F5 /* MJConst.m */; };
+		FC1740A41DF53CD0008793F5 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740911DF53CD0008793F5 /* MJFoundation.m */; };
+		FC1740A51DF53CD0008793F5 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740931DF53CD0008793F5 /* MJIvar.m */; };
+		FC1740A61DF53CD0008793F5 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740951DF53CD0008793F5 /* MJMember.m */; };
+		FC1740A71DF53CD0008793F5 /* MJMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740971DF53CD0008793F5 /* MJMethod.m */; };
+		FC1740A81DF53CD0008793F5 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740991DF53CD0008793F5 /* MJType.m */; };
+		FC1740A91DF53CD0008793F5 /* MJTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17409B1DF53CD0008793F5 /* MJTypeEncoding.m */; };
+		FC1740AA1DF53CD0008793F5 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17409D1DF53CD0008793F5 /* NSObject+MJCoding.m */; };
+		FC1740AB1DF53CD0008793F5 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17409F1DF53CD0008793F5 /* NSObject+MJKeyValue.m */; };
+		FC1740AC1DF53CD0008793F5 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740A11DF53CD0008793F5 /* NSObject+MJMember.m */; };
+		FC1740B01DF53D02008793F5 /* LRNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740AE1DF53D02008793F5 /* LRNewsCell.m */; };
+		FC1740B11DF53D02008793F5 /* LRNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1740AF1DF53D02008793F5 /* LRNewsCell.xib */; };
+		FC1740B41DF53D45008793F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1740B31DF53D45008793F5 /* CoreGraphics.framework */; };
+		FC1740B61DF53D4E008793F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1740B51DF53D4E008793F5 /* Foundation.framework */; };
+		FC1740B81DF53D55008793F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1740B71DF53D55008793F5 /* UIKit.framework */; };
+		FC1740BB1DF5482B008793F5 /* newses.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC1740BA1DF5482B008793F5 /* newses.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC1740661DF538DB008793F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC1740441DF538DB008793F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC17404B1DF538DB008793F5;
+			remoteInfo = LRCircleRollingViewDemo;
+		};
+		FC1740711DF538DB008793F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC1740441DF538DB008793F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC17404B1DF538DB008793F5;
+			remoteInfo = LRCircleRollingViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC17404C1DF538DB008793F5 /* LRCircleRollingViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRCircleRollingViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1740501DF538DB008793F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC1740521DF538DB008793F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC1740531DF538DB008793F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC1740551DF538DB008793F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FC1740561DF538DB008793F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC1740591DF538DB008793F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC17405B1DF538DB008793F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC17405E1DF538DB008793F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC1740601DF538DB008793F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC1740651DF538DB008793F5 /* LRCircleRollingViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LRCircleRollingViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1740691DF538DB008793F5 /* LRCircleRollingViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRCircleRollingViewDemoTests.m; sourceTree = "<group>"; };
+		FC17406B1DF538DB008793F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC1740701DF538DB008793F5 /* LRCircleRollingViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LRCircleRollingViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1740741DF538DB008793F5 /* LRCircleRollingViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRCircleRollingViewDemoUITests.m; sourceTree = "<group>"; };
+		FC1740761DF538DB008793F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC1740831DF539A7008793F5 /* LRCircleRollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCircleRollingView.h; sourceTree = "<group>"; };
+		FC1740841DF539A7008793F5 /* LRCircleRollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCircleRollingView.m; sourceTree = "<group>"; };
+		FC1740871DF53CC2008793F5 /* LRNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNews.h; sourceTree = "<group>"; };
+		FC1740881DF53CC2008793F5 /* LRNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNews.m; sourceTree = "<group>"; };
+		FC17408B1DF53CD0008793F5 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
+		FC17408C1DF53CD0008793F5 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
+		FC17408D1DF53CD0008793F5 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
+		FC17408E1DF53CD0008793F5 /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
+		FC17408F1DF53CD0008793F5 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		FC1740901DF53CD0008793F5 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		FC1740911DF53CD0008793F5 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		FC1740921DF53CD0008793F5 /* MJIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJIvar.h; sourceTree = "<group>"; };
+		FC1740931DF53CD0008793F5 /* MJIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJIvar.m; sourceTree = "<group>"; };
+		FC1740941DF53CD0008793F5 /* MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMember.h; sourceTree = "<group>"; };
+		FC1740951DF53CD0008793F5 /* MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMember.m; sourceTree = "<group>"; };
+		FC1740961DF53CD0008793F5 /* MJMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMethod.h; sourceTree = "<group>"; };
+		FC1740971DF53CD0008793F5 /* MJMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMethod.m; sourceTree = "<group>"; };
+		FC1740981DF53CD0008793F5 /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
+		FC1740991DF53CD0008793F5 /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
+		FC17409A1DF53CD0008793F5 /* MJTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTypeEncoding.h; sourceTree = "<group>"; };
+		FC17409B1DF53CD0008793F5 /* MJTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTypeEncoding.m; sourceTree = "<group>"; };
+		FC17409C1DF53CD0008793F5 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		FC17409D1DF53CD0008793F5 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		FC17409E1DF53CD0008793F5 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		FC17409F1DF53CD0008793F5 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		FC1740A01DF53CD0008793F5 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
+		FC1740A11DF53CD0008793F5 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		FC1740AD1DF53D02008793F5 /* LRNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNewsCell.h; sourceTree = "<group>"; };
+		FC1740AE1DF53D02008793F5 /* LRNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNewsCell.m; sourceTree = "<group>"; };
+		FC1740AF1DF53D02008793F5 /* LRNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LRNewsCell.xib; sourceTree = "<group>"; };
+		FC1740B31DF53D45008793F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FC1740B51DF53D4E008793F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FC1740B71DF53D55008793F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FC1740B91DF54068008793F5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FC1740BA1DF5482B008793F5 /* newses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = newses.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC1740491DF538DB008793F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC1740B81DF53D55008793F5 /* UIKit.framework in Frameworks */,
+				FC1740B61DF53D4E008793F5 /* Foundation.framework in Frameworks */,
+				FC1740B41DF53D45008793F5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC1740621DF538DB008793F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC17406D1DF538DB008793F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC1740431DF538DB008793F5 = {
+			isa = PBXGroup;
+			children = (
+				FC17404E1DF538DB008793F5 /* LRCircleRollingViewDemo */,
+				FC1740681DF538DB008793F5 /* LRCircleRollingViewDemoTests */,
+				FC1740731DF538DB008793F5 /* LRCircleRollingViewDemoUITests */,
+				FC17404D1DF538DB008793F5 /* Products */,
+				FC1740B21DF53D44008793F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC17404D1DF538DB008793F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC17404C1DF538DB008793F5 /* LRCircleRollingViewDemo.app */,
+				FC1740651DF538DB008793F5 /* LRCircleRollingViewDemoTests.xctest */,
+				FC1740701DF538DB008793F5 /* LRCircleRollingViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC17404E1DF538DB008793F5 /* LRCircleRollingViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FC17408A1DF53CD0008793F5 /* MJExtension */,
+				FC1740861DF53C9D008793F5 /* Model */,
+				FC1740821DF53981008793F5 /* LRCircleRollingView */,
+				FC1740521DF538DB008793F5 /* AppDelegate.h */,
+				FC1740531DF538DB008793F5 /* AppDelegate.m */,
+				FC1740B91DF54068008793F5 /* PrefixHeader.pch */,
+				FC1740BA1DF5482B008793F5 /* newses.plist */,
+				FC1740551DF538DB008793F5 /* ViewController.h */,
+				FC1740561DF538DB008793F5 /* ViewController.m */,
+				FC1740581DF538DB008793F5 /* Main.storyboard */,
+				FC17405B1DF538DB008793F5 /* Assets.xcassets */,
+				FC17405D1DF538DB008793F5 /* LaunchScreen.storyboard */,
+				FC1740601DF538DB008793F5 /* Info.plist */,
+				FC17404F1DF538DB008793F5 /* Supporting Files */,
+			);
+			path = LRCircleRollingViewDemo;
+			sourceTree = "<group>";
+		};
+		FC17404F1DF538DB008793F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC1740501DF538DB008793F5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC1740681DF538DB008793F5 /* LRCircleRollingViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC1740691DF538DB008793F5 /* LRCircleRollingViewDemoTests.m */,
+				FC17406B1DF538DB008793F5 /* Info.plist */,
+			);
+			path = LRCircleRollingViewDemoTests;
+			sourceTree = "<group>";
+		};
+		FC1740731DF538DB008793F5 /* LRCircleRollingViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC1740741DF538DB008793F5 /* LRCircleRollingViewDemoUITests.m */,
+				FC1740761DF538DB008793F5 /* Info.plist */,
+			);
+			path = LRCircleRollingViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		FC1740821DF53981008793F5 /* LRCircleRollingView */ = {
+			isa = PBXGroup;
+			children = (
+				FC1740831DF539A7008793F5 /* LRCircleRollingView.h */,
+				FC1740841DF539A7008793F5 /* LRCircleRollingView.m */,
+				FC1740AD1DF53D02008793F5 /* LRNewsCell.h */,
+				FC1740AE1DF53D02008793F5 /* LRNewsCell.m */,
+				FC1740AF1DF53D02008793F5 /* LRNewsCell.xib */,
+			);
+			path = LRCircleRollingView;
+			sourceTree = "<group>";
+		};
+		FC1740861DF53C9D008793F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC1740871DF53CC2008793F5 /* LRNews.h */,
+				FC1740881DF53CC2008793F5 /* LRNews.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC17408A1DF53CD0008793F5 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FC17408B1DF53CD0008793F5 /* MJArgument.h */,
+				FC17408C1DF53CD0008793F5 /* MJArgument.m */,
+				FC17408D1DF53CD0008793F5 /* MJConst.h */,
+				FC17408E1DF53CD0008793F5 /* MJConst.m */,
+				FC17408F1DF53CD0008793F5 /* MJExtension.h */,
+				FC1740901DF53CD0008793F5 /* MJFoundation.h */,
+				FC1740911DF53CD0008793F5 /* MJFoundation.m */,
+				FC1740921DF53CD0008793F5 /* MJIvar.h */,
+				FC1740931DF53CD0008793F5 /* MJIvar.m */,
+				FC1740941DF53CD0008793F5 /* MJMember.h */,
+				FC1740951DF53CD0008793F5 /* MJMember.m */,
+				FC1740961DF53CD0008793F5 /* MJMethod.h */,
+				FC1740971DF53CD0008793F5 /* MJMethod.m */,
+				FC1740981DF53CD0008793F5 /* MJType.h */,
+				FC1740991DF53CD0008793F5 /* MJType.m */,
+				FC17409A1DF53CD0008793F5 /* MJTypeEncoding.h */,
+				FC17409B1DF53CD0008793F5 /* MJTypeEncoding.m */,
+				FC17409C1DF53CD0008793F5 /* NSObject+MJCoding.h */,
+				FC17409D1DF53CD0008793F5 /* NSObject+MJCoding.m */,
+				FC17409E1DF53CD0008793F5 /* NSObject+MJKeyValue.h */,
+				FC17409F1DF53CD0008793F5 /* NSObject+MJKeyValue.m */,
+				FC1740A01DF53CD0008793F5 /* NSObject+MJMember.h */,
+				FC1740A11DF53CD0008793F5 /* NSObject+MJMember.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		FC1740B21DF53D44008793F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC1740B71DF53D55008793F5 /* UIKit.framework */,
+				FC1740B51DF53D4E008793F5 /* Foundation.framework */,
+				FC1740B31DF53D45008793F5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC17404B1DF538DB008793F5 /* LRCircleRollingViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC1740791DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemo" */;
+			buildPhases = (
+				FC1740481DF538DB008793F5 /* Sources */,
+				FC1740491DF538DB008793F5 /* Frameworks */,
+				FC17404A1DF538DB008793F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LRCircleRollingViewDemo;
+			productName = LRCircleRollingViewDemo;
+			productReference = FC17404C1DF538DB008793F5 /* LRCircleRollingViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC1740641DF538DB008793F5 /* LRCircleRollingViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC17407C1DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemoTests" */;
+			buildPhases = (
+				FC1740611DF538DB008793F5 /* Sources */,
+				FC1740621DF538DB008793F5 /* Frameworks */,
+				FC1740631DF538DB008793F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC1740671DF538DB008793F5 /* PBXTargetDependency */,
+			);
+			name = LRCircleRollingViewDemoTests;
+			productName = LRCircleRollingViewDemoTests;
+			productReference = FC1740651DF538DB008793F5 /* LRCircleRollingViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC17406F1DF538DB008793F5 /* LRCircleRollingViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC17407F1DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemoUITests" */;
+			buildPhases = (
+				FC17406C1DF538DB008793F5 /* Sources */,
+				FC17406D1DF538DB008793F5 /* Frameworks */,
+				FC17406E1DF538DB008793F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC1740721DF538DB008793F5 /* PBXTargetDependency */,
+			);
+			name = LRCircleRollingViewDemoUITests;
+			productName = LRCircleRollingViewDemoUITests;
+			productReference = FC1740701DF538DB008793F5 /* LRCircleRollingViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC1740441DF538DB008793F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = LR;
+				TargetAttributes = {
+					FC17404B1DF538DB008793F5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					FC1740641DF538DB008793F5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC17404B1DF538DB008793F5;
+					};
+					FC17406F1DF538DB008793F5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC17404B1DF538DB008793F5;
+					};
+				};
+			};
+			buildConfigurationList = FC1740471DF538DB008793F5 /* Build configuration list for PBXProject "LRCircleRollingViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC1740431DF538DB008793F5;
+			productRefGroup = FC17404D1DF538DB008793F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC17404B1DF538DB008793F5 /* LRCircleRollingViewDemo */,
+				FC1740641DF538DB008793F5 /* LRCircleRollingViewDemoTests */,
+				FC17406F1DF538DB008793F5 /* LRCircleRollingViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC17404A1DF538DB008793F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC17405F1DF538DB008793F5 /* LaunchScreen.storyboard in Resources */,
+				FC1740B11DF53D02008793F5 /* LRNewsCell.xib in Resources */,
+				FC1740BB1DF5482B008793F5 /* newses.plist in Resources */,
+				FC17405C1DF538DB008793F5 /* Assets.xcassets in Resources */,
+				FC17405A1DF538DB008793F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC1740631DF538DB008793F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC17406E1DF538DB008793F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC1740481DF538DB008793F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC1740AC1DF53CD0008793F5 /* NSObject+MJMember.m in Sources */,
+				FC1740AA1DF53CD0008793F5 /* NSObject+MJCoding.m in Sources */,
+				FC1740A51DF53CD0008793F5 /* MJIvar.m in Sources */,
+				FC1740A91DF53CD0008793F5 /* MJTypeEncoding.m in Sources */,
+				FC1740891DF53CC2008793F5 /* LRNews.m in Sources */,
+				FC1740A21DF53CD0008793F5 /* MJArgument.m in Sources */,
+				FC1740B01DF53D02008793F5 /* LRNewsCell.m in Sources */,
+				FC1740A31DF53CD0008793F5 /* MJConst.m in Sources */,
+				FC1740A81DF53CD0008793F5 /* MJType.m in Sources */,
+				FC1740571DF538DB008793F5 /* ViewController.m in Sources */,
+				FC1740541DF538DB008793F5 /* AppDelegate.m in Sources */,
+				FC1740851DF539A7008793F5 /* LRCircleRollingView.m in Sources */,
+				FC1740A71DF53CD0008793F5 /* MJMethod.m in Sources */,
+				FC1740511DF538DB008793F5 /* main.m in Sources */,
+				FC1740A61DF53CD0008793F5 /* MJMember.m in Sources */,
+				FC1740AB1DF53CD0008793F5 /* NSObject+MJKeyValue.m in Sources */,
+				FC1740A41DF53CD0008793F5 /* MJFoundation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC1740611DF538DB008793F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC17406A1DF538DB008793F5 /* LRCircleRollingViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC17406C1DF538DB008793F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC1740751DF538DB008793F5 /* LRCircleRollingViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC1740671DF538DB008793F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC17404B1DF538DB008793F5 /* LRCircleRollingViewDemo */;
+			targetProxy = FC1740661DF538DB008793F5 /* PBXContainerItemProxy */;
+		};
+		FC1740721DF538DB008793F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC17404B1DF538DB008793F5 /* LRCircleRollingViewDemo */;
+			targetProxy = FC1740711DF538DB008793F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC1740581DF538DB008793F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC1740591DF538DB008793F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC17405D1DF538DB008793F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC17405E1DF538DB008793F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC1740771DF538DB008793F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC1740781DF538DB008793F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC17407A1DF538DB008793F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LRCircleRollingViewDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = LRCircleRollingViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vcread.LRCircleRollingViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC17407B1DF538DB008793F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LRCircleRollingViewDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = LRCircleRollingViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vcread.LRCircleRollingViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC17407D1DF538DB008793F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LRCircleRollingViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vcread.LRCircleRollingViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LRCircleRollingViewDemo.app/LRCircleRollingViewDemo";
+			};
+			name = Debug;
+		};
+		FC17407E1DF538DB008793F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LRCircleRollingViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vcread.LRCircleRollingViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LRCircleRollingViewDemo.app/LRCircleRollingViewDemo";
+			};
+			name = Release;
+		};
+		FC1740801DF538DB008793F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LRCircleRollingViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vcread.LRCircleRollingViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LRCircleRollingViewDemo;
+			};
+			name = Debug;
+		};
+		FC1740811DF538DB008793F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LRCircleRollingViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vcread.LRCircleRollingViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LRCircleRollingViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC1740471DF538DB008793F5 /* Build configuration list for PBXProject "LRCircleRollingViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC1740771DF538DB008793F5 /* Debug */,
+				FC1740781DF538DB008793F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC1740791DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC17407A1DF538DB008793F5 /* Debug */,
+				FC17407B1DF538DB008793F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC17407C1DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC17407D1DF538DB008793F5 /* Debug */,
+				FC17407E1DF538DB008793F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC17407F1DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC1740801DF538DB008793F5 /* Debug */,
+				FC1740811DF538DB008793F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC1740441DF538DB008793F5 /* Project object */;
+}
