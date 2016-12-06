@@ -35,8 +35,10 @@ typedef NS_ENUM(NSUInteger, LRPageControlPosition){
     LRPageControlPositionLeftTop = 5
     
 };
-
 @class LRCircleRollingView;
+
+typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexPath *indexPath);
+
 @protocol LRCircleRollingViewDelegate <NSObject>
 
 - (void)circleRollingView:(LRCircleRollingView *)circleRollingView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
@@ -46,6 +48,7 @@ typedef NS_ENUM(NSUInteger, LRPageControlPosition){
 @interface LRCircleRollingView : UIView
 
 @property (nonatomic,weak) id<LRCircleRollingViewDelegate> delegate;
+@property (nonatomic,copy) SelectItemBlock selectItemBlock;
 
 //两种设置pagecontrol的方式优先级 pageControlPositionEnum < pageControlPosition
 @property (nonatomic,assign) LRPageControlPosition pageControlPositionEnum;

@@ -255,6 +255,9 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(circleRollingView:didSelectItemAtIndexPath:)]) {
         [self.delegate circleRollingView:self didSelectItemAtIndexPath:indexPath];
     }
+    if (self.selectItemBlock) {
+        self.selectItemBlock(self, indexPath);
+    }
 }
 
 /**
