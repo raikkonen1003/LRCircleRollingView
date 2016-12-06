@@ -39,6 +39,12 @@ typedef NS_ENUM(NSUInteger, LRPageControlPosition){
 
 typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexPath *indexPath);
 
+@protocol LRCircleRollingViewDataSource <NSObject>
+//定制cell样式
+- (__kindof UICollectionViewCell *)circleRollingView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @protocol LRCircleRollingViewDelegate <NSObject>
 
 - (void)circleRollingView:(LRCircleRollingView *)circleRollingView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
@@ -47,13 +53,21 @@ typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexP
 
 @interface LRCircleRollingView : UIView
 
+@property (nonatomic,weak) id<LRCircleRollingViewDataSource> dataSource;
 @property (nonatomic,weak) id<LRCircleRollingViewDelegate> delegate;
 @property (nonatomic,copy) SelectItemBlock selectItemBlock;
 
-//两种设置pagecontrol的方式优先级 pageControlPositionEnum < pageControlPosition
+
+/**
+ 两种设置pagecontrol的方式优先级 pageControlPositionEnum < pageControlPosition
+ */
 @property (nonatomic,assign) LRPageControlPosition pageControlPositionEnum;
 @property (nonatomic,assign) CGRect pageControlPosition;
 
+@property (nonatomic,assign) CGFloat timeInterval;//默认 2.0
+
+
+@property (nonatomic, strong) UICollectionView *collectionView;
 /**
  初始化方法
 
@@ -78,6 +92,8 @@ typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexP
  @return 初始化的对象
  */
 - (instancetype)initWithImages:(NSArray *)imageArray titles:(NSArray *)titleArray;
+
+- (void)reloadData;
 
 - (void)autoScroll;
 - (void)stopAutoScroll;

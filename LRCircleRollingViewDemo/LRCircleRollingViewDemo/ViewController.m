@@ -10,8 +10,9 @@
 #import "LRCircleRollingView.h"
 #import "MJExtension.h"
 #import "LRModel.h"
+#import "LRNewsCell.h"
 
-@interface ViewController ()<LRCircleRollingViewDelegate>
+@interface ViewController ()<LRCircleRollingViewDelegate,LRCircleRollingViewDataSource>
 @property (nonatomic,strong) NSArray *newses;
 @property (nonatomic,strong) LRCircleRollingView *rollView;
 @end
@@ -50,22 +51,39 @@
         [titleArray addObject:model.title];
     }
     LRCircleRollingView *rollView = [[LRCircleRollingView alloc]initWithImages:imageArray titles:titleArray];
-//    rollView.delegate = self;
+    rollView.delegate = self;
+
     rollView.frame = CGRectMake(10, 56, 300, 130);
 //    rollView.pageControlPosition = CGRectMake(0, rollView.bounds.size.height - 37, 100, 37);
     rollView.pageControlPositionEnum = LRPageControlPositionMiddleBottom;
-    
+    rollView.timeInterval = 5.0;
     [self.view addSubview:rollView];
     self.rollView = rollView;
     
-    self.rollView.selectItemBlock = ^(LRCircleRollingView *circleRollingView, NSIndexPath *indexPath){
-        NSLog(@"点击了第 %ld 组的第 %ld 个",indexPath.section,indexPath.row);
-    };
+    //MARK: 回调二 block
+//    self.rollView.selectItemBlock = ^(LRCircleRollingView *circleRollingView, NSIndexPath *indexPath){
+//        NSLog(@"点击了第 %ld 组的第 %ld 个",indexPath.section,indexPath.row);
+//    };
+    
+    //cell可以自定制
+//    rollView.dataSource = self;//遵守datasource协议进行定制
+//    [rollView.collectionView registerNib:[UINib nibWithNibName:@"LRNewsCell" bundle:nil] forCellWithReuseIdentifier:@"news"];
 }
 
+//#pragma mark- LRCircleRollingViewDataSource
+//- (__kindof UICollectionViewCell *)circleRollingView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    LRNewsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"news" forIndexPath:indexPath];
+//    
+//    cell.news = self.newses[indexPath.item];
+//    
+//    return cell;
+//}
+
+//MARK: 回调一 代理
 #pragma mark- LRCircleRollingViewDelegate
 - (void)circleRollingView:(LRCircleRollingView *)circleRollingView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"点击了第 %ld 组的第 %ld 个",indexPath.section,indexPath.row);
+//    [self.rollView reloadData];
 }
 
 

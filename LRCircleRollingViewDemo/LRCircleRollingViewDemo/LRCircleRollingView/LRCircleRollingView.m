@@ -14,7 +14,7 @@
 #define LRMaxSections 100
 
 @interface LRCircleRollingView () <UICollectionViewDataSource, UICollectionViewDelegate>
-@property (nonatomic, strong) UICollectionView *collectionView;
+
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) NSArray *newses;
@@ -117,8 +117,15 @@
     _pageControlPosition = pageControlPosition;
     self.pageControl.frame = pageControlPosition;
 }
+- (void)setTimeInterval:(CGFloat)timeInterval {
+    _timeInterval = timeInterval;
+    [self stopAutoScroll];
+    [self autoScroll];
+}
 
 - (void)configViewWithItems:(NSArray *)items {
+    
+    self.timeInterval = 2.0f;
     
     self.newses = items;
     
@@ -160,6 +167,12 @@
     [self addTimer];
 }
 
+- (void)reloadData {
+    if (self.collectionView) {
+        [self.collectionView reloadData];
+    }
+}
+
 - (void)autoScroll {
     if (self.newses.count > 0) {
         [self addTimer];
@@ -173,7 +186,7 @@
 
 - (NSTimer *)timer {
     if (!_timer) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:self.timeInterval target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
     return _timer;
@@ -243,11 +256,15 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    LRNewsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LRCellIdentifier forIndexPath:indexPath];
-    
-    cell.news = self.newses[indexPath.item];
-    
-    return cell;
+    if (self.dataSource && [self.dataSource respondsToSelector:@selector(circleRollingView:cellForItemAtIndexPath:)]) {
+        return [self.dataSource circleRollingView:collectionView cellForItemAtIndexPath:indexPath];
+    }else{
+        LRNewsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LRCellIdentifier forIndexPath:indexPath];
+        
+        cell.news = self.newses[indexPath.item];
+        
+        return cell;
+    }
 }
 
 #pragma mark  - UICollectionViewDelegate
