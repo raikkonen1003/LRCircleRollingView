@@ -7,7 +7,7 @@
 //
 
 #import "LRNewsCell.h"
-#import "LRNews.h"
+#import "LRModel.h"
 
 @interface LRNewsCell()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -15,11 +15,15 @@
 @end
 
 @implementation LRNewsCell
-- (void)setNews:(LRNews *)news
+- (void)setNews:(LRModel *)news
 {
     _news = news;
     
     self.iconView.image = [UIImage imageNamed:news.icon];
+    if (!news.title) {
+        self.titleLabel.hidden = YES;
+        return;
+    }
     self.titleLabel.text = NSString(@"  %@", news.title);
 }
 

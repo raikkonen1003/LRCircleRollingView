@@ -8,7 +8,48 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, LRPageControlPosition){
+    /**
+     *  右下
+     */
+    LRPageControlPositionRightBottom = 0,
+    /**
+     *  中下
+     */
+    LRPageControlPositionMiddleBottom = 1,
+    /**
+     *  左下
+     */
+    LRPageControlPositionLeftBottom = 2,
+    /**
+     *  右上
+     */
+    LRPageControlPositionRightTop = 3,
+    /**
+     *  中上
+     */
+    LRPageControlPositionMiddleTop = 4,
+    /**
+     *  左上
+     */
+    LRPageControlPositionLeftTop = 5
+    
+};
+
+@class LRCircleRollingView;
+@protocol LRCircleRollingViewDelegate <NSObject>
+
+- (void)circleRollingView:(LRCircleRollingView *)circleRollingView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface LRCircleRollingView : UIView
+
+@property (nonatomic,weak) id<LRCircleRollingViewDelegate> delegate;
+
+//两种设置pagecontrol的方式优先级 pageControlPositionEnum < pageControlPosition
+@property (nonatomic,assign) LRPageControlPosition pageControlPositionEnum;
+@property (nonatomic,assign) CGRect pageControlPosition;
 
 /**
  初始化方法
@@ -17,6 +58,23 @@
  @return 返回初始化的对象
  */
 - (instancetype)initWithItems:(NSArray *)items;
+
+/**
+ 初始化方法
+
+ @param imageArray 存有图片链接字符串的数组
+ @return 初始化的对象
+ */
+- (instancetype)initWithImages:(NSArray *)imageArray;
+
+/**
+ 初始化方法
+
+ @param imageArray 存有图片链接字符串的数组
+ @param titleArray 存有标题字符串的数组
+ @return 初始化的对象
+ */
+- (instancetype)initWithImages:(NSArray *)imageArray titles:(NSArray *)titleArray;
 
 - (void)autoScroll;
 - (void)stopAutoScroll;

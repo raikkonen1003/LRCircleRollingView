@@ -8,6 +8,7 @@
 
 #import "LRCircleRollingView.h"
 #import "LRNewsCell.h"
+#import "LRModel.h"
 
 #define LRCellIdentifier @"news"
 #define LRMaxSections 100
@@ -35,12 +36,86 @@
     }
     return self;
 }
+
+- (instancetype)initWithImages:(NSArray *)imageArray {
+    
+    return [self initWithImages:imageArray titles:nil];
+}
+
+- (instancetype)initWithImages:(NSArray *)imageArray titles:(NSArray *)titleArray {
+    if (self = [super init]) {
+        [self configDataWithImages:imageArray titles:titleArray];
+    }
+    return self;
+}
+
+- (void)configDataWithImages:(NSArray *)imageArray titles:(NSArray *)titleArray {
+    
+    NSUInteger count = MAX(imageArray.count, titleArray.count);
+    NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:0];
+    for (int i = 0; i < count; i++) {
+        LRModel *model = [[LRModel alloc]init];
+        model.icon = i < imageArray.count ? imageArray[i] :nil;
+        model.title = i < titleArray.count ? titleArray[i] : nil;
+        [dataArray addObject:model];
+    }
+    
+    NSArray *items = [NSArray arrayWithArray:dataArray];
+    [self configViewWithItems:items];
+}
+
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
-    self.pageControl.frame = CGRectMake(frame.size.width - 100, frame.size.height - 37, 100, 37);
+    [self setPageControlPositionEnum:_pageControlPositionEnum];
+    if (![NSStringFromCGRect(self.pageControlPosition) isEqualToString:@"{{0, 0}, {0, 0}}"]) {
+        self.pageControl.frame = self.pageControlPosition;
+    }
     self.layout.itemSize = self.bounds.size;
     self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-//    [self.collectionView reloadData];
+}
+
+- (void)setPageControlPositionEnum:(LRPageControlPosition)pageControlPositionEnum {
+    _pageControlPositionEnum = pageControlPositionEnum;
+    CGRect frame = self.frame;
+    switch (_pageControlPositionEnum) {
+        case LRPageControlPositionRightBottom:
+        {
+            self.pageControl.frame = CGRectMake(frame.size.width - 100, frame.size.height - 37, 100, 37);
+        }
+            break;
+        case LRPageControlPositionMiddleBottom:
+        {
+            self.pageControl.frame = CGRectMake((frame.size.width - 100)/2, frame.size.height - 37, 100, 37);
+        } 
+            break;
+        case LRPageControlPositionLeftBottom:
+        {
+            self.pageControl.frame = CGRectMake(0, frame.size.height - 37, 100, 37);
+        }
+            break;
+        case LRPageControlPositionRightTop:
+        {
+            self.pageControl.frame = CGRectMake(frame.size.width - 100, 0, 100, 37);
+        }
+            break;
+        case LRPageControlPositionMiddleTop:
+        {
+            self.pageControl.frame = CGRectMake((frame.size.width - 100)/2, 0, 100, 37);
+        }
+            break;
+        case LRPageControlPositionLeftTop:
+        {
+            self.pageControl.frame = CGRectMake(0, 0, 100, 37);
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+- (void)setPageControlPosition:(CGRect)pageControlPosition {
+    _pageControlPosition = pageControlPosition;
+    self.pageControl.frame = pageControlPosition;
 }
 
 - (void)configViewWithItems:(NSArray *)items {
@@ -53,10 +128,11 @@
     pageControl.pageIndicatorTintColor = [UIColor lightTextColor];
     pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     pageControl.backgroundColor = [UIColor clearColor];
-    pageControl.frame = CGRectMake(frame.size.width - 100, frame.size.height - 37, 100, 37);
+//    pageControl.frame = CGRectMake(frame.size.width - 100, frame.size.height - 37, 100, 37);
     [self addSubview:pageControl];
     self.pageControl = pageControl;
     self.pageControl.numberOfPages = self.newses.count;
+    self.pageControlPositionEnum = LRPageControlPositionRightBottom;
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -175,6 +251,12 @@
 }
 
 #pragma mark  - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(circleRollingView:didSelectItemAtIndexPath:)]) {
+        [self.delegate circleRollingView:self didSelectItemAtIndexPath:indexPath];
+    }
+}
+
 /**
  *  当用户即将开始拖拽的时候就调用
  */

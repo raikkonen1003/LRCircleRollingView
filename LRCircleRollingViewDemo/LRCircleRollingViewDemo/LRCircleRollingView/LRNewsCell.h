@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class LRNews;
+@class LRModel;
 @interface LRNewsCell : UICollectionViewCell
-@property (nonatomic, strong) LRNews *news;
+@property (nonatomic, strong) LRModel *news;
 @end

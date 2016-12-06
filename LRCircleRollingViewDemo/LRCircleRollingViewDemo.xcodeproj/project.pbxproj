@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC05B8DC1DF6486A0000E9E7 /* LRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC05B8DB1DF6486A0000E9E7 /* LRModel.m */; };
 		FC1740511DF538DB008793F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740501DF538DB008793F5 /* main.m */; };
 		FC1740541DF538DB008793F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740531DF538DB008793F5 /* AppDelegate.m */; };
 		FC1740571DF538DB008793F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740561DF538DB008793F5 /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		FC17406A1DF538DB008793F5 /* LRCircleRollingViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740691DF538DB008793F5 /* LRCircleRollingViewDemoTests.m */; };
 		FC1740751DF538DB008793F5 /* LRCircleRollingViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740741DF538DB008793F5 /* LRCircleRollingViewDemoUITests.m */; };
 		FC1740851DF539A7008793F5 /* LRCircleRollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740841DF539A7008793F5 /* LRCircleRollingView.m */; };
-		FC1740891DF53CC2008793F5 /* LRNews.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740881DF53CC2008793F5 /* LRNews.m */; };
 		FC1740A21DF53CD0008793F5 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17408C1DF53CD0008793F5 /* MJArgument.m */; };
 		FC1740A31DF53CD0008793F5 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FC17408E1DF53CD0008793F5 /* MJConst.m */; };
 		FC1740A41DF53CD0008793F5 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1740911DF53CD0008793F5 /* MJFoundation.m */; };
@@ -54,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC05B8DA1DF6486A0000E9E7 /* LRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRModel.h; sourceTree = "<group>"; };
+		FC05B8DB1DF6486A0000E9E7 /* LRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRModel.m; sourceTree = "<group>"; };
 		FC17404C1DF538DB008793F5 /* LRCircleRollingViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRCircleRollingViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1740501DF538DB008793F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC1740521DF538DB008793F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,8 +74,6 @@
 		FC1740761DF538DB008793F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1740831DF539A7008793F5 /* LRCircleRollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCircleRollingView.h; sourceTree = "<group>"; };
 		FC1740841DF539A7008793F5 /* LRCircleRollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCircleRollingView.m; sourceTree = "<group>"; };
-		FC1740871DF53CC2008793F5 /* LRNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNews.h; sourceTree = "<group>"; };
-		FC1740881DF53CC2008793F5 /* LRNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNews.m; sourceTree = "<group>"; };
 		FC17408B1DF53CD0008793F5 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
 		FC17408C1DF53CD0008793F5 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
 		FC17408D1DF53CD0008793F5 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
@@ -160,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				FC17408A1DF53CD0008793F5 /* MJExtension */,
-				FC1740861DF53C9D008793F5 /* Model */,
 				FC1740821DF53981008793F5 /* LRCircleRollingView */,
 				FC1740521DF538DB008793F5 /* AppDelegate.h */,
 				FC1740531DF538DB008793F5 /* AppDelegate.m */,
@@ -208,20 +207,13 @@
 			children = (
 				FC1740831DF539A7008793F5 /* LRCircleRollingView.h */,
 				FC1740841DF539A7008793F5 /* LRCircleRollingView.m */,
+				FC05B8DA1DF6486A0000E9E7 /* LRModel.h */,
+				FC05B8DB1DF6486A0000E9E7 /* LRModel.m */,
 				FC1740AD1DF53D02008793F5 /* LRNewsCell.h */,
 				FC1740AE1DF53D02008793F5 /* LRNewsCell.m */,
 				FC1740AF1DF53D02008793F5 /* LRNewsCell.xib */,
 			);
 			path = LRCircleRollingView;
-			sourceTree = "<group>";
-		};
-		FC1740861DF53C9D008793F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FC1740871DF53CC2008793F5 /* LRNews.h */,
-				FC1740881DF53CC2008793F5 /* LRNews.m */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		FC17408A1DF53CD0008793F5 /* MJExtension */ = {
@@ -403,7 +395,6 @@
 				FC1740AA1DF53CD0008793F5 /* NSObject+MJCoding.m in Sources */,
 				FC1740A51DF53CD0008793F5 /* MJIvar.m in Sources */,
 				FC1740A91DF53CD0008793F5 /* MJTypeEncoding.m in Sources */,
-				FC1740891DF53CC2008793F5 /* LRNews.m in Sources */,
 				FC1740A21DF53CD0008793F5 /* MJArgument.m in Sources */,
 				FC1740B01DF53D02008793F5 /* LRNewsCell.m in Sources */,
 				FC1740A31DF53CD0008793F5 /* MJConst.m in Sources */,
@@ -413,6 +404,7 @@
 				FC1740851DF539A7008793F5 /* LRCircleRollingView.m in Sources */,
 				FC1740A71DF53CD0008793F5 /* MJMethod.m in Sources */,
 				FC1740511DF538DB008793F5 /* main.m in Sources */,
+				FC05B8DC1DF6486A0000E9E7 /* LRModel.m in Sources */,
 				FC1740A61DF53CD0008793F5 /* MJMember.m in Sources */,
 				FC1740AB1DF53CD0008793F5 /* NSObject+MJKeyValue.m in Sources */,
 				FC1740A41DF53CD0008793F5 /* MJFoundation.m in Sources */,
@@ -651,6 +643,7 @@
 				FC17407B1DF538DB008793F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC17407C1DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +652,7 @@
 				FC17407E1DF538DB008793F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC17407F1DF538DB008793F5 /* Build configuration list for PBXNativeTarget "LRCircleRollingViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +661,7 @@
 				FC1740811DF538DB008793F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
