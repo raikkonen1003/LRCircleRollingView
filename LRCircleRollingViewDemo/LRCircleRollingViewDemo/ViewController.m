@@ -50,15 +50,23 @@
         [imageArray addObject:model.icon];
         [titleArray addObject:model.title];
     }
-    LRCircleRollingView *rollView = [[LRCircleRollingView alloc]initWithImages:imageArray titles:titleArray];
+//    LRCircleRollingView *rollView = [[LRCircleRollingView alloc]initWithImages:nil titles:nil];
+    LRCircleRollingView *rollView = [[LRCircleRollingView alloc]init];
     rollView.delegate = self;
-
+//    rollView.imageArray = imageArray;
     rollView.frame = CGRectMake(10, 56, 300, 130);
 //    rollView.pageControlPosition = CGRectMake(0, rollView.bounds.size.height - 37, 100, 37);
     rollView.pageControlPositionEnum = LRPageControlPositionMiddleBottom;
-    rollView.timeInterval = 5.0;
+    rollView.timeInterval = 3.0;
     [self.view addSubview:rollView];
     self.rollView = rollView;
+    self.rollView.backgroundColor = [UIColor orangeColor];
+    
+    //模拟获取数据成功
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        rollView.imageArray = imageArray;
+        rollView.titleArray = titleArray;
+    });
     
     //MARK: 回调二 block
 //    self.rollView.selectItemBlock = ^(LRCircleRollingView *circleRollingView, NSIndexPath *indexPath){

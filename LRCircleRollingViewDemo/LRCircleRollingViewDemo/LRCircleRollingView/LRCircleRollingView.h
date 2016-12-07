@@ -52,6 +52,15 @@ typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexP
 @end
 
 @interface LRCircleRollingView : UIView
+{
+    NSArray *_imageArray;
+    NSArray *_titleArray;
+}
+/**
+ 先init方法初始化，再单独设置数据源的情况
+ */
+@property (nonatomic,strong) NSArray *imageArray;
+@property (nonatomic,strong) NSArray *titleArray;
 
 @property (nonatomic,weak) id<LRCircleRollingViewDataSource> dataSource;
 @property (nonatomic,weak) id<LRCircleRollingViewDelegate> delegate;
@@ -67,7 +76,10 @@ typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexP
 @property (nonatomic,assign) CGFloat timeInterval;//默认 2.0
 
 
-@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic,strong) UICollectionView *collectionView;
+
+
+
 /**
  初始化方法
 

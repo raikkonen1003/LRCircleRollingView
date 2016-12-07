@@ -30,6 +30,13 @@
     return _newses;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self configView];
+    }
+    return self;
+}
+
 - (instancetype)initWithItems:(NSArray *)items {
     if (self = [super init]) {
         [self configViewWithItems:(NSArray *)items];
@@ -62,6 +69,36 @@
     
     NSArray *items = [NSArray arrayWithArray:dataArray];
     [self configViewWithItems:items];
+}
+
+- (NSArray *)titleArray {
+    if (!_titleArray) {
+        _titleArray = [NSArray array];
+    }
+    return _titleArray;
+}
+- (void)setTitleArray:(NSArray *)titleArray {
+    _titleArray = titleArray;
+    [self configDataWithImages:self.imageArray titles:_titleArray];
+}
+
+- (void)setImageArray:(NSArray *)imageArray {
+    _imageArray = imageArray;
+    [self configDataWithImages:_imageArray titles:self.titleArray];
+}
+- (NSArray *)imageArray {
+    if (!_imageArray) {
+        _imageArray = [NSArray array];
+    }
+    return _imageArray;
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    [super setBackgroundColor:backgroundColor];
+    if (!self.collectionView) {
+        return;
+    }
+    self.collectionView.backgroundColor = backgroundColor;
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -129,13 +166,26 @@
     
     self.newses = items;
     
+    [self configView];
+    
+    if (self.newses != nil && ![self.newses isKindOfClass:[NSNull class]] && [self.newses count] > 0) {
+        // 默认显示最中间的那组
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:LRMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+        
+        // 添加定时器
+        [self addTimer];
+    }
+    
+}
+
+- (void)configView {
     CGRect frame = self.frame;
     
     UIPageControl *pageControl = [[UIPageControl alloc]init];
     pageControl.pageIndicatorTintColor = [UIColor lightTextColor];
     pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     pageControl.backgroundColor = [UIColor clearColor];
-//    pageControl.frame = CGRectMake(frame.size.width - 100, frame.size.height - 37, 100, 37);
+    //    pageControl.frame = CGRectMake(frame.size.width - 100, frame.size.height - 37, 100, 37);
     [self addSubview:pageControl];
     self.pageControl = pageControl;
     self.pageControl.numberOfPages = self.newses.count;
@@ -155,16 +205,12 @@
     // 注册cell
     [self.collectionView registerNib:[UINib nibWithNibName:@"LRNewsCell" bundle:nil] forCellWithReuseIdentifier:LRCellIdentifier];
     
-    // 默认显示最中间的那组
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:LRMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+    
     self.collectionView.pagingEnabled = YES;
     self.collectionView.showsVerticalScrollIndicator = NO;
     self.collectionView.showsHorizontalScrollIndicator = NO;
     [self addSubview:self.collectionView];
     [self bringSubviewToFront:self.pageControl];
-    
-    // 添加定时器
-    [self addTimer];
 }
 
 - (void)reloadData {
