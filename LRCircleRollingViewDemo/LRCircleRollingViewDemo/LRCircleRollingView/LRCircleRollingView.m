@@ -189,7 +189,7 @@
     [self addSubview:pageControl];
     self.pageControl = pageControl;
     self.pageControl.numberOfPages = self.newses.count;
-//    self.pageControlPositionEnum = LRPageControlPositionRightBottom;
+    self.pageControlPositionEnum = _pageControlPositionEnum;
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
