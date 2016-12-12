@@ -78,7 +78,7 @@ typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexP
 
 @property (nonatomic,strong) UICollectionView *collectionView;
 
-
+@property (nonatomic,strong) UIImageView *placeholderImageView;
 
 /**
  初始化方法

@@ -109,6 +109,7 @@
     }
     self.layout.itemSize = self.bounds.size;
     self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    self.placeholderImageView.frame = self.collectionView.frame;
 }
 
 - (void)setPageControlPositionEnum:(LRPageControlPosition)pageControlPositionEnum {
@@ -173,9 +174,15 @@
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:LRMaxSections/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         
         // 添加定时器
-        [self addTimer];
+//        [self addTimer];
+        [self autoScroll];
     }
     
+    if (self.newses.count <= 0) {
+        self.placeholderImageView.hidden = NO;
+    }else{
+        self.placeholderImageView.hidden = YES;
+    }
 }
 
 - (void)configView {
@@ -211,6 +218,15 @@
     self.collectionView.showsHorizontalScrollIndicator = NO;
     [self addSubview:self.collectionView];
     [self bringSubviewToFront:self.pageControl];
+    
+    
+    //placeholder 占位图
+    UIImageView *placeholderImageView = [[UIImageView alloc]init];
+    placeholderImageView.frame = self.collectionView.frame;
+    placeholderImageView.image = [UIImage imageNamed:@"LRImage.bundle/LRplaceholder.png"];
+    [self addSubview:placeholderImageView];
+    self.placeholderImageView = placeholderImageView;
+
 }
 
 - (void)reloadData {
@@ -220,13 +236,23 @@
 }
 
 - (void)autoScroll {
-    if (self.newses.count > 0) {
+    if (!self.collectionView) return;
+    
+    if (self.newses.count > 1) {
         [self addTimer];
+        self.collectionView.scrollEnabled = YES;
+    }else{
+        self.collectionView.scrollEnabled = NO;
     }
 }
 - (void)stopAutoScroll {
-    if (self.newses.count > 0) {
+    if (!self.collectionView) return;
+    
+    if (self.newses.count > 1) {
         [self removeTimer];
+        self.collectionView.scrollEnabled = YES;
+    }else{
+        self.collectionView.scrollEnabled = NO;
     }
 }
 
@@ -328,7 +354,8 @@
  */
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    [self removeTimer];
+//    [self removeTimer];
+    [self stopAutoScroll];
 }
 
 /**
@@ -337,7 +364,8 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     //    NSLog(@"scrollViewDidEndDragging--松开");
-    [self addTimer];
+//    [self addTimer];
+    [self autoScroll];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

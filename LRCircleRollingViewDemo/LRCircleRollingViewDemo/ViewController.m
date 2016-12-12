@@ -56,7 +56,7 @@
 //    rollView.imageArray = imageArray;
     rollView.frame = CGRectMake(10, 56, 300, 130);
 //    rollView.pageControlPosition = CGRectMake(0, rollView.bounds.size.height - 37, 100, 37);
-    rollView.pageControlPositionEnum = LRPageControlPositionMiddleBottom;
+//    rollView.pageControlPositionEnum = LRPageControlPositionMiddleBottom;
     rollView.timeInterval = 3.0;
     [self.view addSubview:rollView];
     self.rollView = rollView;
@@ -66,6 +66,10 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         rollView.imageArray = imageArray;
         rollView.titleArray = titleArray;
+        
+        //没有数据的情况
+//        rollView.imageArray = nil;
+//        rollView.titleArray = nil;
     });
     
     //MARK: 回调二 block

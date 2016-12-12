@@ -34,6 +34,7 @@
 		FC1740B61DF53D4E008793F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1740B51DF53D4E008793F5 /* Foundation.framework */; };
 		FC1740B81DF53D55008793F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1740B71DF53D55008793F5 /* UIKit.framework */; };
 		FC1740BB1DF5482B008793F5 /* newses.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC1740BA1DF5482B008793F5 /* newses.plist */; };
+		FC67E9DB1DFE556700CBD0A4 /* LRImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC67E9DA1DFE556700CBD0A4 /* LRImage.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		FC1740B71DF53D55008793F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC1740B91DF54068008793F5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FC1740BA1DF5482B008793F5 /* newses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = newses.plist; sourceTree = "<group>"; };
+		FC67E9DA1DFE556700CBD0A4 /* LRImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LRImage.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		FC1740821DF53981008793F5 /* LRCircleRollingView */ = {
 			isa = PBXGroup;
 			children = (
+				FC67E9DA1DFE556700CBD0A4 /* LRImage.bundle */,
 				FC1740831DF539A7008793F5 /* LRCircleRollingView.h */,
 				FC1740841DF539A7008793F5 /* LRCircleRollingView.m */,
 				FC05B8DA1DF6486A0000E9E7 /* LRModel.h */,
@@ -365,6 +368,7 @@
 				FC17405F1DF538DB008793F5 /* LaunchScreen.storyboard in Resources */,
 				FC1740B11DF53D02008793F5 /* LRNewsCell.xib in Resources */,
 				FC1740BB1DF5482B008793F5 /* newses.plist in Resources */,
+				FC67E9DB1DFE556700CBD0A4 /* LRImage.bundle in Resources */,
 				FC17405C1DF538DB008793F5 /* Assets.xcassets in Resources */,
 				FC17405A1DF538DB008793F5 /* Main.storyboard in Resources */,
 			);
