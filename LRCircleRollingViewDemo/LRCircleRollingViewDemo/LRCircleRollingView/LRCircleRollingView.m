@@ -109,7 +109,7 @@
     }
     self.layout.itemSize = self.bounds.size;
     self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-    self.placeholderImageView.frame = self.collectionView.frame;
+//    self.placeholderImageView.frame = self.collectionView.frame;
 }
 
 - (void)setPageControlPositionEnum:(LRPageControlPosition)pageControlPositionEnum {
@@ -178,11 +178,11 @@
         [self autoScroll];
     }
     
-    if (self.newses.count <= 0) {
-        self.placeholderImageView.hidden = NO;
-    }else{
-        self.placeholderImageView.hidden = YES;
-    }
+//    if (self.newses.count <= 0) {
+//        self.placeholderImageView.hidden = NO;
+//    }else{
+//        self.placeholderImageView.hidden = YES;
+//    }
     
     self.pageControl.hidden = self.newses.count <= 1 ? YES : NO;
 }
@@ -222,12 +222,12 @@
     [self bringSubviewToFront:self.pageControl];
     
     
-    //placeholder 占位图
-    UIImageView *placeholderImageView = [[UIImageView alloc]init];
-    placeholderImageView.frame = self.collectionView.frame;
-    placeholderImageView.image = [UIImage imageNamed:@"LRImage.bundle/LRplaceholder.png"];
-    [self addSubview:placeholderImageView];
-    self.placeholderImageView = placeholderImageView;
+//    //placeholder 占位图
+//    UIImageView *placeholderImageView = [[UIImageView alloc]init];
+//    placeholderImageView.frame = self.collectionView.frame;
+//    placeholderImageView.image = [UIImage imageNamed:@"LRImage.bundle/LRplaceholder.png"];
+//    [self addSubview:placeholderImageView];
+//    self.placeholderImageView = placeholderImageView;
 
 }
 
@@ -320,7 +320,7 @@
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.newses.count;
+    return self.newses.count > 0 ? self.newses.count : 1;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -335,7 +335,12 @@
     }else{
         LRNewsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LRCellIdentifier forIndexPath:indexPath];
         
-        cell.news = self.newses[indexPath.item];
+        if (self.newses.count > 0) {
+            cell.news = self.newses[indexPath.item];
+        }else{
+            cell.news = nil;
+        }
+
         
         return cell;
     }

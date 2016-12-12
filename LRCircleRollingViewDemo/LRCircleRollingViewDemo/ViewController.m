@@ -63,7 +63,7 @@
     self.rollView.backgroundColor = [UIColor orangeColor];
     
     //模拟获取数据成功
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         rollView.imageArray = imageArray;
         rollView.titleArray = titleArray;
         

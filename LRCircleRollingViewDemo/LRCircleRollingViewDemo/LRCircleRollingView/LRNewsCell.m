@@ -19,7 +19,7 @@
 {
     _news = news;
     
-    self.iconView.image = [UIImage imageNamed:news.icon];
+    self.iconView.image = !_news ? [UIImage imageNamed:@"LRImage.bundle/LRplaceholder.png"] : [UIImage imageNamed:news.icon];
     if (!news.title) {
         self.titleLabel.hidden = YES;
         return;
