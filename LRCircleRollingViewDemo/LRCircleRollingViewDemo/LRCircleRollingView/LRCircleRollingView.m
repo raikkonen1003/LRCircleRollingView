@@ -183,6 +183,8 @@
     }else{
         self.placeholderImageView.hidden = YES;
     }
+    
+    self.pageControl.hidden = self.newses.count <= 1 ? YES : NO;
 }
 
 - (void)configView {
@@ -370,6 +372,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if (self.newses.count <= 0) return;
     int page = (int)(scrollView.contentOffset.x / scrollView.bounds.size.width + 0.5) % self.newses.count;
     self.pageControl.currentPage = page;
 }
