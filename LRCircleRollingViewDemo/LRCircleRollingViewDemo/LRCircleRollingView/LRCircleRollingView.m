@@ -109,7 +109,6 @@
     }
     self.layout.itemSize = self.bounds.size;
     self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-//    self.placeholderImageView.frame = self.collectionView.frame;
 }
 
 - (void)setPageControlPositionEnum:(LRPageControlPosition)pageControlPositionEnum {
@@ -163,7 +162,7 @@
 
 - (void)configViewWithItems:(NSArray *)items {
     
-    self.timeInterval = 2.0f;
+    self.timeInterval = _timeInterval <= 0.0f ? 2.0f : _timeInterval;
     
     self.newses = items;
     
@@ -187,27 +186,37 @@
     self.pageControl.hidden = self.newses.count <= 1 ? YES : NO;
 }
 
+- (UIPageControl *)pageControl {
+    if (!_pageControl) {
+        _pageControl = [[UIPageControl alloc]init];
+        _pageControl.pageIndicatorTintColor = [UIColor lightTextColor];
+        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+        _pageControl.backgroundColor = [UIColor clearColor];
+    }
+    return _pageControl;
+}
+- (UICollectionViewFlowLayout *)layout {
+    if (!_layout) {
+        _layout = [[UICollectionViewFlowLayout alloc] init];
+        _layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        _layout.minimumInteritemSpacing = 0;
+        _layout.minimumLineSpacing = 0;
+        _layout.itemSize = self.bounds.size;
+        _layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    return _layout;
+}
+
 - (void)configView {
     CGRect frame = self.frame;
     
-    UIPageControl *pageControl = [[UIPageControl alloc]init];
-    pageControl.pageIndicatorTintColor = [UIColor lightTextColor];
-    pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-    pageControl.backgroundColor = [UIColor clearColor];
     //    pageControl.frame = CGRectMake(frame.size.width - 100, frame.size.height - 37, 100, 37);
-    [self addSubview:pageControl];
-    self.pageControl = pageControl;
+    [self addSubview:self.pageControl];
     self.pageControl.numberOfPages = self.newses.count;
     self.pageControlPositionEnum = _pageControlPositionEnum;
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    layout.minimumInteritemSpacing = 0;
-    layout.minimumLineSpacing = 0;
-    layout.itemSize = self.bounds.size;
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.layout = layout;
-    self.collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:layout];
+    
+    self.collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:self.layout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
@@ -340,8 +349,6 @@
         }else{
             cell.news = nil;
         }
-
-        
         return cell;
     }
 }
