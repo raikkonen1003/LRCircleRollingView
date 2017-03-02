@@ -38,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.view.backgroundColor = [UIColor brownColor];
     //一 直接传入显示的模型
 //    LRCircleRollingView *rollView = [[LRCircleRollingView alloc]initWithItems:self.newses];
     
@@ -93,10 +93,10 @@
 
 //MARK: 回调一 代理
 #pragma mark- LRCircleRollingViewDelegate
-- (void)circleRollingView:(LRCircleRollingView *)circleRollingView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"点击了第 %ld 组的第 %ld 个",indexPath.section,indexPath.row);
-//    [self.rollView reloadData];
-}
+//- (void)circleRollingView:(LRCircleRollingView *)circleRollingView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    NSLog(@"点击了第 %ld 组的第 %ld 个",indexPath.section,indexPath.row);
+////    [self.rollView reloadData];
+//}
 
 
 - (void)didReceiveMemoryWarning {

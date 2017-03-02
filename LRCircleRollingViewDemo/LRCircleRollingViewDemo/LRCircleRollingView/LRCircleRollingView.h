@@ -41,12 +41,13 @@ typedef void (^SelectItemBlock)(LRCircleRollingView *circleRollingView, NSIndexP
 
 @protocol LRCircleRollingViewDataSource <NSObject>
 //定制cell样式
+@optional
 - (__kindof UICollectionViewCell *)circleRollingView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 @protocol LRCircleRollingViewDelegate <NSObject>
-
+@optional
 - (void)circleRollingView:(LRCircleRollingView *)circleRollingView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
